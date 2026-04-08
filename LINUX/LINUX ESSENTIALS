@@ -3,7 +3,7 @@
 Here is a list of common commands used for checking system information, networking, and processes on a Linux machine (e.g., Ubuntu).
 
 ## System Information
-1. cat /proc/cpuinfo - Displays CPU architecture and details.
+1. cat /proc/cpuinfo - Displays CPU architecture and details. 
 2. free -m - Shows free and used memory (RAM) in megabytes.
 3. df -h - Displays disk space usage in human-readable format (GB, MB).
 4. cat /etc/os-release - Shows detailed information about the Linux distribution release.
@@ -22,4 +22,4 @@ Here is a list of common commands used for checking system information, networki
 ## Environment & Shell
 12. printenv - Prints all environment variables.
 13. echo $SHELL - Outputs the path to the current shell being used (e.g., `/bin/bash`).
-14. history - Displays the command history for the current user session.
+14. history - Displays the command history for the current user session. 
