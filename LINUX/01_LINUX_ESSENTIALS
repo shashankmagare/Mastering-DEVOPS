@@ -5,7 +5,7 @@ Here is a list of common commands used for checking system information, networki
 ## System Information
 1. cat /proc/cpuinfo - Displays CPU architecture and details. 
 2. free -m - Shows free and used memory (RAM) in megabytes.
-3. df -h - Displays disk space usage in human-readable format (GB, MB).
+3. df -h - Displays disk space usage in human-readable format (GB, MB). 
 4. cat /etc/os-release - Shows detailed information about the Linux distribution release.
 5. uname -r - Prints the exact version of the Linux kernel currently running.
 
