@@ -15,3 +15,9 @@
 
 ## System Manuals (Help)
 * `man <command>` - Opens the built-in manual page for any command to show how it works (e.g., `man vim` or `man ls`). Press `q` to quit the manual.
+
+## Advanced File & Directory Operations
+* `cd ~` - The tilde (`~`) is a shortcut that quickly returns you to your home directory (e.g., `/home/shashank`), no matter where you are in the system.
+* `cp -r <source_dir> <destination_dir>` - The `-r` flag stands for "recursive." It allows you to copy an entire directory and all the files inside it (e.g., `cp -r aws cloud`).
+* `mv <source> <destination>` - Moves a file or directory to a new location. It is also the command used to **rename** files/folders (e.g., `mv azu cloud`).
+* `rm <file>` - Removes/deletes a file permanently (e.g., `rm hello.txt`). *Note: Unlike `rmdir` which only deletes empty folders, `rm` deletes files. Use with caution!*
