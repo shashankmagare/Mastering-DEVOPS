@@ -1,0 +1,32 @@
+## User & Identity Management
+* `whoami` - Prints the username of the user you are currently logged in as.
+* `id <username>` - Shows the User ID (UID), Group ID (GID), and the groups a specific user belongs to (e.g., `id shashank` or `id root`).
+* `sudo adduser <username>` - Creates a completely new user account on the system (e.g., `sudo adduser shanks`), sets up their home directory, and prompts you to create a password for them.
+* `sudo su - <username>` - Switches your current terminal session to another user (e.g., `sudo su - shanks`). The `-` (hyphen) ensures you load that user's specific environment variables and start in their home directory.
+* `logout` - Exits the current user session. If you used `su` to switch users, this drops you back to your previous user account.
+
+## System Paths & Configuration Files
+*Linux stores configuration and system information in very specific text files. Here is how to view and edit them:*
+
+* **`/etc/passwd`** — **The User Database Path**
+  * *What it is:* This file contains a list of all user accounts on the system, showing their user ID, home directory path, and default shell (like `/bin/bash`).
+  * `cat /etc/passwd` - Dumps the entire list of users on the system to your screen.
+  * `grep shashank /etc/passwd` - Searches this specific file to show only the account details for "shashank".
+  * `grep bash /etc/passwd` - Shows only the users who have `bash` assigned as their default shell.
+
+* **`/opt`** — **The Optional Software Path**
+  * *What it is:* This directory is traditionally reserved for installing third-party, add-on software that doesn't come directly from the standard Linux package manager.
+  * `cd /opt` - Navigates into the `/opt` directory so you can manage or inspect manually installed applications.
+
+* **`/etc/ssh/sshd_config.d/`** — **The SSH Server Settings Path**
+  * *What it is:* This directory holds configuration files for the SSH Daemon (the service that allows you to securely log into the server). Cloud providers (like AWS or Azure) often put specific files here (like `50-cloudimg-settings.conf`) to control things like whether password logins are allowed.
+  * `ls /etc/ssh/sshd_config.d` - Lists all the SSH configuration files currently active in that directory.
+  * `sudo vim /etc/ssh/sshd_config.d/60-cloudimg-settings.conf` - Opens a specific SSH configuration file in Vim as the root user so you can edit the server's SSH access rules.
+
+## Service Management
+* *Whenever you edit a configuration file (like the SSH configs above), the service doesn't know about the changes until you restart it!*
+* `sudo systemctl restart ssh` - Restores the SSH service, forcing it to read the new configuration files you just edited. `systemctl` is the central command used to start, stop, enable, or restart background services on modern Linux systems.
+
+## Advanced Listing
+* `ls -l` - The `-l` flag stands for "long format". Instead of just showing names, it shows file permissions (read/write/execute), file owners, file sizes, and the exact date and time the file was last modified.
+* `ls -l /` - Shows the long format details for all the foundational folders in the absolute root directory.
