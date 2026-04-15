@@ -1,9 +1,9 @@
 ## User & Identity Management
-* `whoami` - Prints the username of the user you are currently logged in as.
-* `id <username>` - Shows the User ID (UID), Group ID (GID), and the groups a specific user belongs to (e.g., `id shashank` or `id root`).
-* `sudo adduser <username>` - Creates a completely new user account on the system (e.g., `sudo adduser shanks`), sets up their home directory, and prompts you to create a password for them.
-* `sudo su - <username>` - Switches your current terminal session to another user (e.g., `sudo su - shanks`). The `-` (hyphen) ensures you load that user's specific environment variables and start in their home directory.
-* `logout` - Exits the current user session. If you used `su` to switch users, this drops you back to your previous user account.
+41 `whoami` - Prints the username of the user you are currently logged in as.
+42 `id <username>` - Shows the User ID (UID), Group ID (GID), and the groups a specific user belongs to (e.g., `id shashank` or `id root`).
+43 `sudo adduser <username>` - Creates a completely new user account on the system (e.g., `sudo adduser shanks`), sets up their home directory, and prompts you to create a password for them.
+44 `sudo su - <username>` - Switches your current terminal session to another user (e.g., `sudo su - shanks`). The `-` (hyphen) ensures you load that user's specific environment variables and start in their home directory.
+45 `logout` - Exits the current user session. If you used `su` to switch users, this drops you back to your previous user account.
 
 ## System Paths & Configuration Files
 *Linux stores configuration and system information in very specific text files. Here is how to view and edit them:*
