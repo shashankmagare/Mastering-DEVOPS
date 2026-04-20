@@ -20,3 +20,4 @@
 * `curl -LO <url>` - Downloads a file directly from a URL (e.g., downloading the `kubectl` binary). 
 * `./<filename>` - Runs an executable file or script located in your *current* directory (e.g., `./kubectl`). 
   > **Note:** A file *must* be made executable using `chmod u+x` before you can run it with `./`!
+ 
