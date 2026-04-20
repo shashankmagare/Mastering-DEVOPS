@@ -1,0 +1,22 @@
+## File Permissions (`chmod`)
+*Linux uses `u` (user/owner), `g` (group), `o` (others), and `r` (read), `w` (write), `x` (execute).*
+* `chmod o-r <file>` - Removes (`-`) read (`r`) access for others (`o`).
+* `chmod u+w <file>` - Adds (`+`) write (`w`) access for the user/owner (`u`).
+* `chmod g+w <file>` - Adds write access for the group (`g`).
+* `chmod ugo-w <file>` - Removes write access for everyone (User, Group, and Others).
+* `chmod u+x <file>` - Makes a file executable (`x`) for the user (required to run scripts/binaries).
+* `chmod 664 <file>` - Sets permissions using numbers instead of letters (User=Read/Write, Group=Read/Write, Others=Read-only).
+
+## Ownership & User Groups
+* `sudo chown <user> <file>` - Changes the user who owns the file (e.g., `chown root file.txt`).
+* `sudo chgrp <group> <file>` - Changes the group that owns the file.
+* `sudo usermod -aG <group> <user>` - Adds a user to a specific group (e.g., adding `shashank` to the `shanky` group).
+
+## Important System Paths (Groups)
+* **`/etc/group` (The Group Database):** Stores information about all user groups on the server.
+  * `cat /etc/group` - Lists all system groups and shows who is inside them.
+
+## Downloading & Executing Binaries
+* `curl -LO <url>` - Downloads a file directly from a URL (e.g., downloading the `kubectl` binary). 
+* `./<filename>` - Runs an executable file or script located in your *current* directory (e.g., `./kubectl`). 
+  > **Note:** A file *must* be made executable using `chmod u+x` before you can run it with `./`!
