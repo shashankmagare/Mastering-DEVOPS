@@ -1,0 +1,29 @@
+1. Check that the container engine is installed
+Open a terminal and run:
+*  docker --version  *
+
+2. Run an Nginx container
+docker run -d --name nginx-container nginx:latest
+
+3. List running containers
+docker ps
+
+4. Run an Ubuntu container attached to your terminal
+docker run -it --name ubuntu-container ubuntu:latest
+
+Ctrl + P, then Ctrl + Q -to exit for ubuntu terminal 
+
+5. List containers again
+docker ps
+
+If you instead typed exit inside Ubuntu, the Ubuntu container would stop because its main command (bash) ended.
+In that case, use this command to view both running and stopped containers:
+docker ps -a
+
+6. Stop the containers
+docker stop nginx-container ubuntu-container
+
+7. Remove the containers
+docker rm nginx-container ubuntu-container
+
+Easy-peasy!
