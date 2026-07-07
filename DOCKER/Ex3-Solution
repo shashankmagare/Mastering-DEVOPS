@@ -1,0 +1,20 @@
+1. List images already available on your system
+docker images
+
+2. Pull the latest Ubuntu image
+docker pull ubuntu:latest
+
+3. Run a container using the Ubuntu image
+docker run -it --name ubuntu-test ubuntu:latest 
+
+4. Try to remove the Ubuntu image
+docker rmi ubuntu:latest
+
+5. Check all containers, including stopped ones
+docker ps -a
+
+6. Remove the container that uses the image
+docker rm ubuntu-test
+
+7. Remove the Ubuntu image again
+docker rmi ubuntu:latest
