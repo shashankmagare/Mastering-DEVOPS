@@ -1,0 +1,10 @@
+1. Run the web server in the background and map its port to local port 8080
+docker run -d --name nginx-web -p 8080:80 nginx:latest
+
+2. Verify that port 8080 is bound
+docker ps
+
+3. Open the web server from your local host
+Open this in your browser:
+http://localhost:8080
+You should see the Welcome to nginx! page.
